@@ -1,3 +1,7 @@
 # Python compiled files
 __pycache__/
 *.pyc
+
+# Local reports (Word documents)
+pairwise_alignment_report.docx
+*.docx
