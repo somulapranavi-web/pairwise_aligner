@@ -1,0 +1,48 @@
+======================================================================
+              HUMAN VS. MOUSE INSULIN SEQUENCE ALIGNMENT REPORT
+======================================================================
+Generated: 2026-06-03
+Input Sequences:
+  - Sequence 1: Human Insulin (INS_HUMAN) - 110 aa
+  - Sequence 2: Mouse Insulin-1 (INS1_MOUSE) - 132 aa
+
+Parameters:
+  - Match Reward: 1
+  - Mismatch Penalty: -1
+  - Gap Penalty: -2
+
+----------------------------------------------------------------------
+1. GLOBAL ALIGNMENT (Needleman-Wunsch Algorithm)
+----------------------------------------------------------------------
+Alignment Score: 8
+Sequence Identity: 84/134 (62.7%)
+
+Aligned Sequences:
+Seq1: MALWMR-L---L--PLL---ALL-ALWG-PD-------------PAAAFVNQHLCGSHLVEALYLVCGERGFFYTPKTRREAEDLQVGQVELGGGPGAGSLQPLALEGSLQKRGIVEQCCTSICSLYQLENYCN
+      |..|.| |   |  .||   ||| ...| .|             ....|||||||||||||||||||||||||||||.|||.||.||.|.||||.|  |.||.||||...||||||.|||||||||||||||||
+Seq2: MIVWQRQLWCCLWGCLLVAYALLNQKQGIVDQCCTSICSLYQLENYCNFVNQHLCGSHLVEALYLVCGERGFFYTPKSRREVEDPQVEQLELGGSP--GDLQTLALEVARQKRGIVDQCCTSICSLYQLENYCN
+
+----------------------------------------------------------------------
+2. LOCAL ALIGNMENT (Smith-Waterman Algorithm)
+----------------------------------------------------------------------
+Alignment Score: 56
+Sequence Identity: 72/86 (83.7%)
+
+Aligned Sequences:
+Seq1: FVNQHLCGSHLVEALYLVCGERGFFYTPKTRREAEDLQVGQVELGGGPGAGSLQPLALEGSLQKRGIVEQCCTSICSLYQLENYCN
+      |||||||||||||||||||||||||||||.|||.||.||.|.||||.|  |.||.||||...||||||.|||||||||||||||||
+Seq2: FVNQHLCGSHLVEALYLVCGERGFFYTPKSRREVEDPQVEQLELGGSP--GDLQTLALEVARQKRGIVDQCCTSICSLYQLENYCN
+
+======================================================================
+BIOLOGICAL INTERPRETATION & ANALYSIS
+======================================================================
+The difference between the global and local alignments highlights the structural biology of the insulin protein:
+
+1. Signal Peptide Divergence (Signal Sequence):
+   The first section of both insulin preproproteins contains a signal peptide that guides the protein to the endoplasmic reticulum. This region is highly variable between species. 
+   - The Global Aligner (Needleman-Wunsch) is forced to align these regions, introducing extensive gaps and mismatch penalties at the N-terminus, resulting in a low score of 8 and 62.7% identity.
+
+2. Conserved Mature Peptide (A and B chains):
+   The active, mature insulin molecule consists of the B chain and A chain, which are highly conserved. 
+   - The Local Aligner (Smith-Waterman) successfully clips off the divergent N-terminal signal peptides and isolates the mature functional peptide sequence (starting at FVNQHLC...). This results in a high-scoring local alignment of 56 with a much higher sequence identity of 83.7%.
+======================================================================
