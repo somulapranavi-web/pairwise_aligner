@@ -84,3 +84,19 @@ Seq2: MIVWQRQLWCCLWGCLLVAYALLNQKQGIVD...
 Identity: 84/134 (62.7%)
 ========================================
 ```
+
+---
+
+## Dynamic Programming Grid Visualizations (Human vs. Mouse Insulin)
+
+These heatmaps display the dynamic programming scoring matrices calculated for the real sequence alignment of **Human Insulin (110 aa)** and **Mouse Insulin-1 (132 aa)**:
+
+### 1. Global Alignment (Needleman-Wunsch Grid)
+The global grid is forced to span from the N-terminus to the C-terminus of both proteins. The traceback path (shown in solid red) starts at the bottom-right corner `(110, 132)` and traces back to `(0, 0)`:
+
+![Needleman-Wunsch Global Insulin Heatmap](needleman_wunsch_insulin_heatmap.png)
+
+### 2. Local Alignment (Smith-Waterman Grid)
+The local grid floors negative cell scores at `0`. The traceback path starts at the cell with the maximum score (`56`, representing the C-terminus of the mature functional insulin chain) and traces backwards to the start of the highly conserved mature hormone segment:
+
+![Smith-Waterman Local Insulin Heatmap](smith_waterman_insulin_heatmap.png)
