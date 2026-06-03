@@ -84,19 +84,3 @@ Seq2: MIVWQRQLWCCLWGCLLVAYALLNQKQGIVD...
 Identity: 84/134 (62.7%)
 ========================================
 ```
-
----
-
-## Dynamic Programming Grid Visualizations
-
-Here are visual representations of the dynamic programming matrices calculated for the alignment of `HELLO` vs `CELLO`:
-
-### 1. Global Alignment (Needleman-Wunsch Grid)
-The global grid starts at `(0,0)` and traces all the way to `(5,5)`. Cell colors reflect the score accumulation (using a Yellow-Green-Blue gradient), with the traceback path highlighted in dashed red:
-
-![Needleman-Wunsch Global Heatmap](needleman_wunsch_heatmap.png)
-
-### 2. Local Alignment (Smith-Waterman Grid)
-The local grid floors negative cell scores at `0`. Traceback begins at the cell with the highest overall score (`O` vs `O` with value `4`) and tracks backwards until it hits `0` (reconstructing the matching local alignment `ELLO` vs `ELLO`):
-
-![Smith-Waterman Local Heatmap](smith_waterman_heatmap.png)
