@@ -5,4 +5,3 @@ __pycache__/
 # Local reports (Word documents)
 pairwise_alignment_report.docx
 *.docx
-alignment_heatmap.png
